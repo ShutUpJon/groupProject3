@@ -45,6 +45,19 @@ class Landing extends Component {
             </div>
           </div>
         </div>
+        <div className="row">
+          <div className="col s12 center-align">
+            <div className="form-group">
+              <label for="artistSearch">Artist</label>
+              <input type="text" className="form-control" id="artistSearch" placeholder="Enter artist"></input>
+            </div>
+            <div className="form-group">
+              <label for="citySearch">City</label>
+              <input type="text" className="form-control" id="citySearch" placeholder="Enter City"></input>
+            </div>
+            <button type="submit" className="btn btn-primary waves-effect waves-light hoverable">Search</button>
+          </div>
+        </div>
       </div>
     );
   }
