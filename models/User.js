@@ -18,7 +18,23 @@ const UserSchema = new Schema({
   date: {
     type: Date,
     default: Date.now
-  }
+  },
+  favArtists: [
+    {
+      // Store ObjectIds in the array
+      type: Schema.Types.ObjectId,
+      // The ObjectIds will refer to the ids in the Artist model
+      ref: "Artist"
+    }
+  ],
+  favCities: [
+    {
+      // Store ObjectIds in the array
+      type: Schema.Types.ObjectId,
+      // The ObjectIds will refer to the ids in the City model
+      ref: "City"
+    }
+  ]
 });
 
 module.exports = User = mongoose.model("users", UserSchema);
