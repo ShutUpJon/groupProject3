@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import LocationSearchInput from './Autocomplete';
 
 class Landing extends Component {
   render() {
@@ -13,7 +14,7 @@ class Landing extends Component {
             </div>
             <div className="form-group">
               <label for="citySearch">City</label>
-              <input type="text" className="form-control" id="citySearch" placeholder="Enter City"></input>
+              <LocationSearchInput />
             </div>
             <button type="submit" className="btn btn-primary waves-effect waves-light hoverable">Search</button>
           </div>
