@@ -1,55 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#000000">
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous" />
-  <title>MERN Auth App</title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous" />
+    <title>MERN Auth App</title>
+  </head>
 
-<body>
-  <noscript>
-    You need to enable JavaScript to run this app.
-  </noscript>
-  <div id="root"></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script type="text/javascript">
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    function initAutocomplete() {
-      // Create the autocomplete object, restricting the search to geographical
-      // location types.
-      var autocomplete = new google.maps.places.Autocomplete(
-            /** @type {!HTMLInputElement} */(document.getElementById('citySearch')),
-        {
-          types: ['(cities)'],
-          componentRestrictions: { 'country': 'us' }
-        });
-      autocomplete.addListener('place_changed', function () {
-        var place = autocomplete.getPlace();
-        console.log(place);
-      })
-    };
+    <script src="https://unpkg.com/react/umd/react.production.js" crossorigin></script>
 
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPmxGsaHT-silFQUJO898ABopWlQswjB8&libraries=places&callback=initAutocomplete"
-    async defer></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.production.js" crossorigin></script>
 
-  <script src="https://unpkg.com/react/umd/react.production.js" crossorigin />
+    <script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js" crossorigin></script>
 
-  <script src="https://unpkg.com/react-dom/umd/react-dom.production.js" crossorigin />
+    <script>var Alert = ReactBootstrap.Alert;</script>
 
-  <script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js" crossorigin />
-
-  <script>var Alert = ReactBootstrap.Alert;</script>
-</body>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPmxGsaHT-silFQUJO898ABopWlQswjB8&libraries=places"></script>
+  </body>
 
 </html>
