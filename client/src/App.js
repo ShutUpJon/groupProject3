@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 
@@ -9,6 +9,7 @@ import store from "./store";
 
 import Navbar from "./components/layout/Navbar";
 import Landing from "./components/layout/Landing";
+import Events from "./components/layout/Events";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
@@ -36,15 +37,36 @@ if (localStorage.jwtToken) {
   }
 }
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { 
+      artist: '',
+      latLng: '',
+    };
+  }
+
+  handleSearchParams = (searchParams) => {
+    console.log(searchParams);
+    this.setState({
+      artist: searchParams.artist,
+      latLng: searchParams.latLng
+    });
+    console.log(this.state);
+  }
+
   render() {
     return (
       <Provider store={store}>
         <Router>
           <div className="App">
             <Navbar />
-            <Route exact path="/" component={Landing} />
+            <Route exact path="/" render={() => <Landing searchParams={(searchParams) => this.handleSearchParams(searchParams)}/>} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/events" render={()=><Events city={this.state.latLng} artist={this.state.artist}/>} />
+            {(this.state.artist || this.state.latLng) && 
+              <Redirect to="/events"/>}
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
