@@ -1,0 +1,23 @@
+
+.carousel-caption {
+     position: absolute;
+     top: 10%;
+     text-transform: uppercase;
+     width: 100%;
+     right: 0;
+     left: 0;
+}
+.carousel-caption h1 {
+     font-size: 3.8rem;
+     font-weight: 700;
+     letter-spacing: .3rem;
+     text-shadow: .1rem .1rem .8rem black;
+}
+.carousel-caption h3 {
+     font-size: 2rem;
+     text-shadow: .1rem .1rem .5rem black;
+}
+.carousel-control-next,
+.carousel-control-prev {
+     display: none;
+}
