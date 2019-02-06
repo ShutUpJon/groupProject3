@@ -7,7 +7,11 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
 
-import Navbar from "./components/layout/Navbar";
+import { Container } from 'react-bootstrap';
+import CustomNavbar from './components/Navbar/Navbar';
+import CustomCarousel from './components/Carousel/Carousel';
+import CustomJumbotron from './components/Jumbotron/Jumbotron';
+import CustomCard from './components/Card/Card';
 import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
@@ -41,13 +45,18 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Navbar />
-            <Route exact path="/" component={Landing} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/login" component={Login} />
-            <Switch>
-              <PrivateRoute exact path="/dashboard" component={Dashboard} />
-            </Switch>
+            <Container>
+              <CustomNavbar />
+              <CustomCarousel />
+              <CustomJumbotron />
+              <CustomCard />
+              <Route exact path="/" component={Landing} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/login" component={Login} />
+              <Switch>
+                <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              </Switch>
+            </Container>
           </div>
         </Router>
       </Provider>
