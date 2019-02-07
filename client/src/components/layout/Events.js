@@ -9,7 +9,7 @@ class Events extends Component {
   componentDidMount() {
     let queryURL = "";
     if (this.props.artist && this.props.city) {
-      queryURL = encodeURI(`https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=rQfy38E98IxqazSzP7PjGLbvIVDiHlUu&classificationName=Musickeyword=${this.props.artist}&latlong=${this.props.city}`);
+      queryURL = encodeURI(`https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=rQfy38E98IxqazSzP7PjGLbvIVDiHlUu&classificationName=Music&keyword=${this.props.artist}&latlong=${this.props.city}`);
     } else if (this.props.artist) {
       queryURL = encodeURI(`https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=rQfy38E98IxqazSzP7PjGLbvIVDiHlUu&classificationName=Music&keyword=${this.props.artist}`);
     } else if (this.props.city) {
