@@ -44,7 +44,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       artist: '',
       latLng: '',
     };
@@ -69,12 +69,12 @@ class App extends Component {
               <CustomCarousel />
               <CustomJumbotron />
               <CustomCard />
-              <Route exact path="/" component={Landing} />
+              <Route exact path="/" render={() => <Landing searchParams={(searchParams) => this.handleSearchParams(searchParams)} />} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
-              <Route exact path="/events" render={()=><Events city={this.state.latLng} artist={this.state.artist}/>} />
-              {(this.state.artist || this.state.latLng) && 
-                <Redirect to="/events"/>}
+              <Route exact path="/events" render={() => <Events city={this.state.latLng} artist={this.state.artist} />} />
+              {(this.state.artist || this.state.latLng) &&
+                <Redirect to="/events" />}
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
               </Switch>
