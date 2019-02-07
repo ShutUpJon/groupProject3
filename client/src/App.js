@@ -9,9 +9,6 @@ import store from "./store";
 
 import { Container } from 'react-bootstrap';
 import CustomNavbar from './components/Navbar/Navbar';
-import CustomCarousel from './components/Carousel/Carousel';
-import CustomJumbotron from './components/Jumbotron/Jumbotron';
-import CustomCard from './components/Card/Card';
 import Landing from "./components/layout/Landing";
 import Events from "./components/layout/Events";
 import Register from "./components/auth/Register";
@@ -56,7 +53,6 @@ class App extends Component {
       artist: searchParams.artist,
       latLng: searchParams.latLng
     });
-    console.log(this.state);
   }
 
   render() {
@@ -66,9 +62,6 @@ class App extends Component {
           <div className="App">
             <Container>
               <CustomNavbar />
-              <CustomCarousel />
-              <CustomJumbotron />
-              <CustomCard />
               <Route exact path="/" render={() => <Landing searchParams={(searchParams) => this.handleSearchParams(searchParams)} />} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />

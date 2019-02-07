@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import LocationSearchInput from './Autocomplete';
+import CustomCarousel from './../Carousel/Carousel';
+import CustomJumbotron from './../Jumbotron/Jumbotron';
+import CustomCard from './../Card/Card';
+import { Carousel } from 'react-bootstrap';
 
 class Landing extends Component {
 
@@ -28,19 +32,24 @@ class Landing extends Component {
 
   render() {
     return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
-        <div className="row">
-          <form className="col s12 align-center" onSubmit={this.handleSubmit}>
-            <div className="form-group">
-              <label for="artistSearch">Artist</label>
-              <input type="text" className="form-control" id="artistSearch" placeholder="Enter artist" value={this.state.artist} onChange={this.handleArtistChange}></input>
-            </div>
-            <div className="form-group">
-              <label for="citySearch">City</label>
-              <LocationSearchInput latLong={(latLng) => this.handleCityChange(latLng)}/>
-            </div>
-            <button type="submit" className="btn btn-primary waves-effect waves-light hoverable">Search</button>
-          </form>
+      <div>
+        <CustomCarousel />
+        <CustomJumbotron />
+        <CustomCard />
+        <div style={{ height: "75vh" }} className="container valign-wrapper">
+          <div className="row">
+            <form className="col s12 align-center" onSubmit={this.handleSubmit}>
+              <div className="form-group">
+                <label for="artistSearch">Artist</label>
+                <input type="text" className="form-control" id="artistSearch" placeholder="Enter artist" value={this.state.artist} onChange={this.handleArtistChange}></input>
+              </div>
+              <div className="form-group">
+                <label for="citySearch">City</label>
+                <LocationSearchInput latLong={(latLng) => this.handleCityChange(latLng)}/>
+              </div>
+              <button type="submit" className="btn btn-primary waves-effect waves-light hoverable">Search</button>
+            </form>
+          </div>
         </div>
       </div>
     );
