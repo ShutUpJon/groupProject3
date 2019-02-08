@@ -4,3 +4,10 @@ body {
      overflow-x: hidden;
      font-family: 'Roboto', sans-serif;
 }
+
+.offset:before {
+     height: 3.9rem;
+     margin-top: -3.8rem;
+     content: "";
+     display: block;
+}
