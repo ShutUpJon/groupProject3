@@ -1,3 +1,13 @@
-.jumbotron {
+.jumbo1 {
      text-align: center;
+     color: white;
+     background: rgb(235,235,242);
+     background: radial-gradient(circle, rgba(235,235,242,1) 0%, rgba(181,181,186,1) 35%, rgba(0,12,14,1) 100%);
+     text-shadow: .1rem .1rem .8rem black;
+     padding-top: 1.5rem;
+}
+
+h1 {
+     padding-bottom: 2rem;
+     padding-top: 0rem;
 }
