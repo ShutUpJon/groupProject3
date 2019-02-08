@@ -15,7 +15,6 @@ class Events extends Component {
     } else if (this.props.city) {
       queryURL = encodeURI(`https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=rQfy38E98IxqazSzP7PjGLbvIVDiHlUu&classificationName=Music&latlong=${this.props.city}`);
     }
-    console.log(queryURL);
     axios.get(queryURL)
       .then(res => {
         console.log(res.data);
@@ -27,10 +26,13 @@ class Events extends Component {
   render() {
     return (
       <div>
-        <h1>{`/r/${this.props.artist}`}</h1>
+        <h1>{`${this.props.artist}`}</h1>
         <ul>
-          {this.state.events.map(event =>
-            <li key={event.id}>{event.name} - {event._embedded.venues[0].name} - {event._embedded.venues[0].city.name}, {event._embedded.venues[0].state.name} - {event.dates.start.localDate} {event.dates.start.localTime}</li>
+          {this.state.events.map((event, index) =>
+            <li key={event.id}>
+              {event.name} - {event._embedded.venues[0].name} - {event._embedded.venues[0].city.name}, {event._embedded.venues[0].state.name} - {event.dates.start.localDate} {event.dates.start.localTime}
+              <a href={"/events/" + index}>Select Event</a>
+            </li>
           )}
         </ul>
       </div>

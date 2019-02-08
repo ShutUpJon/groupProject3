@@ -3,7 +3,6 @@ import LocationSearchInput from './Autocomplete';
 import CustomCarousel from './../Carousel/Carousel';
 import CustomJumbotron from './../Jumbotron/Jumbotron';
 import CustomCard from './../Card/Card';
-import { Carousel } from 'react-bootstrap';
 
 class Landing extends Component {
 
@@ -17,8 +16,6 @@ class Landing extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.setState({ submitted: true });
-    alert("Artist: " + this.state.artist + "\nLatLng: " + this.state.latLng);
     this.props.searchParams(this.state);
   }
 
