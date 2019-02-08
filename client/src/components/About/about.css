@@ -1,6 +1,6 @@
 .about {
-     background: rgb(13,13,235);
-     background: radial-gradient(circle, rgba(13,13,235,1) 0%, rgba(17,7,133,1) 35%, rgba(1,4,19,1) 100%);
+     background: rgb(255,255,255);
+     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(133,133,133,1) 50%, rgba(0,0,0,1) 100%);
      color: white;
      margin: 0;
      padding-top: 3rem;
