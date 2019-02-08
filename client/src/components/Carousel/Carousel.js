@@ -29,8 +29,8 @@ class CustomCarousel extends Component {
                          />
 
                          <Carousel.Caption>
-                              <h1>Second slide label</h1>
-                              <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                              <h1>Book Flights</h1>
+                              <h3>Use Our App To Check Flights For Your Preferred Show.</h3>
                          </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -41,8 +41,8 @@ class CustomCarousel extends Component {
                          />
 
                          <Carousel.Caption>
-                              <h1>Third slide label</h1>
-                              <h3>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</h3>
+                              <h1>Book Lodging</h1>
+                              <h3>Use Roadie to check on hotels closest to your venue of choice.</h3>
                          </Carousel.Caption>
                     </Carousel.Item>
                </Carousel>

@@ -5,7 +5,7 @@ import './jumbotron.css';
 class CustomJumbotron extends Component {
      render() {
           return (
-               <Jumbotron fluid>
+               <Jumbotron fluid className="jumbo1">
                     <Container>
                          <h1>Destination. Music.</h1>
                          <h3>Finding Concert Tickets, Flights, Hotels has never been easier.</h3>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 
 var card1 = require('./card1.jpeg');
-var card2 = require('./card2.jpeg')
+var card2 = require('./card2.jpeg');
 
 class CustomCard extends Component {
      render() {
