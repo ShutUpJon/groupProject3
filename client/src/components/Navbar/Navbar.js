@@ -9,7 +9,7 @@ class CustomNavbar extends Component {
      render() {
           return (
                <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="sticky-top">
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="/">
                          <img
                               src={Logo}
                               width="150px"
@@ -21,9 +21,9 @@ class CustomNavbar extends Component {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" >
                          <Container>
-                              <Nav className="justify-content-end" activeKey="/home">
+                              <Nav className="justify-content-end" activeKey="/">
                                    <Nav.Item>
-                                        <Nav.Link href="#home">Home</Nav.Link>
+                                        <Nav.Link href="/">Home</Nav.Link>
                                    </Nav.Item>
                                    <Nav.Item>
                                         <Nav.Link href="#search">Search</Nav.Link>

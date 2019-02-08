@@ -18,7 +18,7 @@ class CustomCard extends Component {
                                              Some quick example text to build on the card title and make up the bulk of
                                              the card's content.
                                         </Card.Text>
-                                        <Button variant="outline-dark">Search Artists</Button>
+                                        <Button variant="outline-dark" target="_blank" href="/search">Search Artists</Button>
                                    </Card.Body>
                               </Card>
                          </Col>
@@ -31,7 +31,7 @@ class CustomCard extends Component {
                                              Some quick example text to build on the card title and make up the bulk of
                                              the card's content.
                                         </Card.Text>
-                                        <Button variant="outline-dark">Search Location</Button>
+                                        <Button variant="outline-dark" target="_blank" href="/search">Search Location</Button>
                                    </Card.Body>
                               </Card>
                          </Col>

@@ -15,6 +15,7 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
+import Search from './components/layout/Search';
 
 import "./App.css";
 
@@ -65,6 +66,7 @@ class App extends Component {
               <Route exact path="/" render={() => <Landing searchParams={(searchParams) => this.handleSearchParams(searchParams)} />} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/search" render={() => <Search searchParams={(searchParams) => this.handleSearchParams(searchParams)} />} />
               <Route exact path="/events" render={() => <Events city={this.state.latLng} artist={this.state.artist} />} />
               {(this.state.artist || this.state.latLng) &&
                 <Redirect to="/events" />}
