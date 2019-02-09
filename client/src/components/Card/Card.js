@@ -7,7 +7,7 @@ var card2 = require('./card2.jpeg');
 class CustomCard extends Component {
      render() {
           return (
-               <Container className="text-center" id="search">
+               <Container fluid className="text-center" id="search">
                     <Row>
                          <Col xs={12} md={6}>
                               <Card>
