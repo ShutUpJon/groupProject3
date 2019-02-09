@@ -3,6 +3,7 @@
      color: white;
      text-transform: uppercase;
      padding: 2rem;
+     border-radius: 0;
 }
 .social h3 { 
      padding-bottom: 2rem;
@@ -18,6 +19,10 @@
 .fa-github-square {
      color: white;
 }
-.hr .light {
-     color: white;
+.fa-facebook:hover, 
+.fa-instagram:hover, 
+.fa-twitter-square:hover,
+.fa-youtube-square:hover,
+.fa-github-square:hover {
+     color: #666;
 }

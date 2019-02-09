@@ -1,0 +1,14 @@
+.btn {
+     margin: 10px;
+}
+.events-page {
+     text-transform: uppercase;
+}
+h1 {
+     text-align: center;
+     padding-top: 1rem;
+     padding-bottom: .5rem;
+}
+ul {
+     list-style-type: none;
+}
