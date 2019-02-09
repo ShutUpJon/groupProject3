@@ -61,7 +61,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Container>
+            <Container fluid>
               <CustomNavbar />
               <Route exact path="/" render={() => <Landing searchParams={(searchParams) => this.handleSearchParams(searchParams)} />} />
               <Route exact path="/register" component={Register} />

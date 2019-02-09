@@ -7,7 +7,7 @@ var Image1 = require('./image1.jpeg');
 class CustomImage extends Component {
      render() {
           return (
-                    <Image src={Image1} fluid />
+                    <Image fluid src={Image1} />
           )
      }
 }
