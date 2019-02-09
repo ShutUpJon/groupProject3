@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { Container } from 'react-bootstrap';
 import axios from "axios";
 import Hotels from "./Hotels";
 
@@ -17,9 +18,9 @@ class SelectedEvent extends Component {
         this.setState({ nearbyHotels: hotels });
       });
   }
-  
+
   render() {
-    
+
     const {
       dates,
       images,
@@ -27,17 +28,19 @@ class SelectedEvent extends Component {
       _embedded
     } = this.props.selectedEvent
     return (
-      <Fragment>
-        <div>
-          <h1>{name}</h1>
-          <h3>{_embedded.venues[0].name}</h3>
-          <h4>{dates.start.dateTime}</h4>
-          <h4><img src={images[0].url} alt={name}></img></h4>
-        </div>
-        <div>
-          {this.state.nearbyHotels && <Hotels hotels={this.state.nearbyHotels}/>}
-        </div>
-      </Fragment>
+      <Container fluid className="text-center">
+        <Fragment>
+          <div>
+            <h1>{name}</h1>
+            <h3>{_embedded.venues[0].name}</h3>
+            <h4>{dates.start.dateTime}</h4>
+            <h4><img src={images[0].url} alt={name}></img></h4>
+          </div>
+          <div>
+            {this.state.nearbyHotels && <Hotels hotels={this.state.nearbyHotels} />}
+          </div>
+        </Fragment>
+      </Container>
     );
   }
 };
