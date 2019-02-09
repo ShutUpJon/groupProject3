@@ -3,11 +3,12 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from 'react-places-autocomplete';
+import './autocomplete.css';
 
 class LocationSearchInput extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       address: '',
       latLng: ''
     };
@@ -25,9 +26,9 @@ class LocationSearchInput extends Component {
         this.props.latLong(this.state.latLng)
       })
       .catch(error => console.error('Error', error));
-    this.setState({ 
+    this.setState({
       address: address
-    });   
+    });
   };
 
   handleCloseClick = () => {
@@ -40,7 +41,7 @@ class LocationSearchInput extends Component {
       componentRestrictions: { 'country': 'us' }
     }
     return (
-            
+
       <PlacesAutocomplete
         value={this.state.address}
         onChange={this.handleChange}
@@ -49,22 +50,22 @@ class LocationSearchInput extends Component {
       >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
           <div>
-            <input
-              {...getInputProps({
-                placeholder: 'Search Places ...',
-                id: 'citySearch',
-                type: 'text',
-                className: 'form-control'
-              })}
-            />
-            {this.state.address.length > 0 && (
-              <button
-                className="clear-button"
-                onClick={this.handleCloseClick}
-              >
-                x
-              </button>
-            )}
+            <div className="input-group">
+              <input
+                {...getInputProps({
+                  placeholder: 'Search Places ...',
+                  id: 'citySearch',
+                  type: 'text',
+                  className: 'form-control'
+
+                })}
+              />
+              {this.state.address.length > 0 && (
+                <div className="input-group-append">
+                  <button className="btn btn-outline-dark" onClick={this.handleCloseClick}>X</button>
+                </div>
+              )}
+            </div>
             <div className="autocomplete-dropdown-container">
               {loading && <div>Loading...</div>}
               {suggestions.map(suggestion => {

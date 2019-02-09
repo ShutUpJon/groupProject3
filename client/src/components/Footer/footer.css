@@ -1,3 +1,6 @@
+.container-fluid.no-padding {
+     padding: 0;
+ }
 .social {
      background-color: black;
      color: white;

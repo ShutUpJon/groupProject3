@@ -56,14 +56,14 @@ class Events extends Component {
           ) : (
               <Fragment>
                     <h1>{`${this.props.artist}`}</h1>
-                    <ul>
+                    <ul >
                       {this.state.events.map((event, index) =>
                         <li key={event.id}>
                         <Row>
-                        <Col lg={10} md={12} sm={12}>
+                        <Col lg={10} md={10} sm={10}>
                           {event.dates.start.localDate} - {event.name} - {event._embedded.venues[0].name} - {event._embedded.venues[0].city.name}, {event._embedded.venues[0].state.name}
                           </Col>
-                          <Col lg={2} md={12} sm={12}>
+                          <Col lg={2} md={2} sm={2}>
                           <button onClick={this.handleClick} id={index} className="btn btn-outline-dark">Select Event</button>
                           </Col>
                           </Row>
