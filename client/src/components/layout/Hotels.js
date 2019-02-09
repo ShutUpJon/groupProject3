@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import axios from "axios";
+import FlightSearch from "./FlightSearch";
 
 class Hotels extends Component {
   state = {
@@ -8,7 +9,7 @@ class Hotels extends Component {
 
   handleClick = (event) => {
     event.preventDefault();
-    let queryURL = encodeURI(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyDPmxGsaHT-silFQUJO898ABopWlQswjB8&placeid=${this.props.hotels[event.target.id].place_id}`);
+    let queryURL = encodeURI(`https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyDPmxGsaHT-silFQUJO898ABopWlQswjB8&placeid=${this.props.hotels[event.target.id].place_id}`);
     console.log(queryURL);
 
     axios.get(queryURL)
@@ -23,6 +24,7 @@ class Hotels extends Component {
 
     return (
       <div>
+        <h1>Hotels</h1>
         <ul>
           {this.props.hotels.map((hotel, index) =>
             <li data-key={hotel.id}>
@@ -39,25 +41,6 @@ class Hotels extends Component {
             </li>
           )}
         </ul>
-
-        {/* {this.state.selectedEvent ? (
-        <Fragment>
-          <SelectedEvent selectedEvent={this.state.selectedEvent}/>
-          <button onClick={this.handleBack} className="btn btn-outline-dark waves-effect waves-light hoverable">Back to All Events</button>
-        </Fragment>  
-        ) : (
-          <Fragment>
-            <h1>{`${this.props.artist}`}</h1>
-            <ul>
-              {this.state.events.map((event, index) =>
-                <li key={event.id}>
-                  {event.name} - {event._embedded.venues[0].name} - {event._embedded.venues[0].city.name}, {event._embedded.venues[0].state.name} - {event.dates.start.localDate} {event.dates.start.localTime}<br></br>
-                  <button onClick={this.handleClick} id={index} className="btn btn-outline-dark waves-effect waves-light hoverable">Select Event</button>
-                </li>
-              )}
-            </ul>
-          </Fragment>
-        )} */}
       </div>
     );
   }

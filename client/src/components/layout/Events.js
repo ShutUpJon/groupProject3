@@ -4,6 +4,7 @@ import axios from 'axios';
 import SelectedEvent from "./SelectedEvent";
 import Footer from './../Footer/Footer';
 import './events.css';
+import { withRouter } from 'react-router-dom';
 
 class Events extends Component {
   state = {
@@ -38,14 +39,19 @@ class Events extends Component {
     this.setState({ selectedEvent: "" });
   }
 
+  handleGoToFlights = (event) => {
+    this.props.history.push(`/flights`);
+  }
+
   render() {
     return (
       <Container className="events-page">
         <div>
           {this.state.selectedEvent ? (
             <Fragment>
-              <SelectedEvent selectedEvent={this.state.selectedEvent} />
               <button onClick={this.handleBack} className="btn btn-outline-dark">Back to All Events</button>
+              <button onClick={this.handleGoToFlights} className="btn btn-outline-dark">Search For Flights</button>
+              <SelectedEvent selectedEvent={this.state.selectedEvent} />
             </Fragment>
           ) : (
               <Fragment>
@@ -73,4 +79,4 @@ class Events extends Component {
   }
 };
 
-export default Events;
+export default withRouter(Events);
