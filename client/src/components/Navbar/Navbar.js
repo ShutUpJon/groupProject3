@@ -26,7 +26,7 @@ class CustomNavbar extends Component {
                                         <Nav.Link href="/">Home</Nav.Link>
                                    </Nav.Item>
                                    <Nav.Item>
-                                        <Nav.Link href="#search">Search</Nav.Link>
+                                        <Nav.Link href="/search">Search</Nav.Link>
                                    </Nav.Item>
                                    <Nav.Item>
                                         <Nav.Link href="#about">About</Nav.Link>

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import axios from 'axios';
 import SelectedEvent from "./SelectedEvent";
+import Footer from './../Footer/Footer';
 
 class Events extends Component {
   state = {
@@ -58,7 +59,7 @@ class Events extends Component {
             </ul>
           </Fragment>
         )}
-        
+        <Footer />
       </div>
     );
   }
