@@ -1,0 +1,23 @@
+.social {
+     background-color: black;
+     color: white;
+     text-transform: uppercase;
+     padding: 2rem;
+}
+.social h3 { 
+     padding-bottom: 2rem;
+}
+.social a {
+     font-size: 4.5em;
+     padding: 3rem;
+}
+.fa-facebook, 
+.fa-instagram, 
+.fa-twitter-square,
+.fa-youtube-square,
+.fa-github-square {
+     color: white;
+}
+.hr .light {
+     color: white;
+}

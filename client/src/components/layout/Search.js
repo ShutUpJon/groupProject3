@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LocationSearchInput from './Autocomplete';
+import Footer from './../Footer/Footer';
 
 class Search extends Component {
 
@@ -39,6 +40,13 @@ class Search extends Component {
             <button type="submit" className="btn btn-outline-dark waves-effect waves-light hoverable">Search</button>
           </form>
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <Footer />
       </div>
     )
   }
