@@ -1,7 +1,9 @@
 import React, { Component, Fragment } from "react";
+import { Container, Col, Row } from 'react-bootstrap';
 import axios from 'axios';
 import SelectedEvent from "./SelectedEvent";
 import Footer from './../Footer/Footer';
+import './events.css';
 
 class Events extends Component {
   state = {
@@ -29,7 +31,7 @@ class Events extends Component {
   handleClick = (event) => {
     event.preventDefault();
     console.log(event.target.id);
-    this.setState({ selectedEvent: this.state.events[event.target.id]})
+    this.setState({ selectedEvent: this.state.events[event.target.id] })
   }
 
   handleBack = (event) => {
@@ -40,27 +42,35 @@ class Events extends Component {
 
   render() {
     return (
-      <div>
-        {this.state.selectedEvent ? (
-        <Fragment>
-          <SelectedEvent selectedEvent={this.state.selectedEvent}/>
-          <button onClick={this.handleBack} className="btn btn-outline-dark waves-effect waves-light hoverable">Back to All Events</button>
-        </Fragment>  
-        ) : (
-          <Fragment>
-            <h1>{`${this.props.artist}`}</h1>
-            <ul>
-              {this.state.events.map((event, index) =>
-                <li key={event.id}>
-                  {event.name} - {event._embedded.venues[0].name} - {event._embedded.venues[0].city.name}, {event._embedded.venues[0].state.name} - {event.dates.start.localDate} {event.dates.start.localTime}<br></br>
-                  <button onClick={this.handleClick} id={index} className="btn btn-outline-dark waves-effect waves-light hoverable">Select Event</button>
-                </li>
-              )}
-            </ul>
-          </Fragment>
-        )}
-        <Footer />
-      </div>
+      <Container className="events-page">
+        <div>
+          {this.state.selectedEvent ? (
+            <Fragment>
+              <SelectedEvent selectedEvent={this.state.selectedEvent} />
+              <button onClick={this.handleBack} className="btn btn-outline-dark">Back to All Events</button>
+            </Fragment>
+          ) : (
+              <Fragment>
+                    <h1>{`${this.props.artist}`}</h1>
+                    <ul>
+                      {this.state.events.map((event, index) =>
+                        <li key={event.id}>
+                        <Row>
+                        <Col lg={10} md={12} sm={12}>
+                          {event.dates.start.localDate} - {event.name} - {event._embedded.venues[0].name} - {event._embedded.venues[0].city.name}, {event._embedded.venues[0].state.name}
+                          </Col>
+                          <Col lg={2} md={12} sm={12}>
+                          <button onClick={this.handleClick} id={index} className="btn btn-outline-dark">Select Event</button>
+                          </Col>
+                          </Row>
+                        </li>
+                      )}
+                    </ul>
+              </Fragment>
+            )}
+          <Footer />
+        </div>
+      </Container>
     );
   }
 };

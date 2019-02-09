@@ -52,8 +52,9 @@ class LocationSearchInput extends Component {
             <input
               {...getInputProps({
                 placeholder: 'Search Places ...',
-                className: 'location-search-input',
                 id: 'citySearch',
+                type: 'text',
+                className: 'form-control'
               })}
             />
             {this.state.address.length > 0 && (
