@@ -28,13 +28,11 @@ class Events extends Component {
 
   handleClick = (event) => {
     event.preventDefault();
-    console.log(event.target.id);
     this.setState({ selectedEvent: this.state.events[event.target.id]})
   }
 
   handleBack = (event) => {
     event.preventDefault();
-    console.log("made it");
     this.setState({ selectedEvent: "" });
   }
 
