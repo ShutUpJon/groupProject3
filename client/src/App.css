@@ -4,6 +4,9 @@ body {
      overflow-x: hidden;
      font-family: 'Roboto', sans-serif;
 }
+.container-fluid.no-padding {
+    padding: 0;
+}
 
 .offset:before {
      height: 3.9rem;

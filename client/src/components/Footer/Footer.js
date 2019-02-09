@@ -5,7 +5,7 @@ import './footer.css';
 class Footer extends Component {
      render() {
           return (
-               <Container fluid>
+               <Container fluid className="no-padding">
                     <Jumbotron className="social text-center" id="connect">
                          <h1>Connect With Us</h1>
                          <h3>Keep up to date on what we're working on next</h3>
