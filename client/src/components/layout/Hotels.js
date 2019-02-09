@@ -10,7 +10,7 @@ class Hotels extends Component {
 
   handleClick = (event) => {
     event.preventDefault();
-    let queryURL = encodeURI(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyDPmxGsaHT-silFQUJO898ABopWlQswjB8&placeid=${this.props.hotels[event.target.id].place_id}`);
+    let queryURL = encodeURI(`https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyDPmxGsaHT-silFQUJO898ABopWlQswjB8&placeid=${this.props.hotels[event.target.id].place_id}`);
     console.log(queryURL);
 
     axios.get(queryURL)

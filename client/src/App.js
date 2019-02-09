@@ -16,8 +16,8 @@ import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import Search from './components/layout/Search';
-
 import "./App.css";
+import FlightSearch from './components/layout/FlightSearch';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -68,6 +68,7 @@ class App extends Component {
               <Route exact path="/login" component={Login} />
               <Route exact path="/search" render={() => <Search searchParams={(searchParams) => this.handleSearchParams(searchParams)} />} />
               <Route exact path="/events" render={() => <Events city={this.state.latLng} artist={this.state.artist} />} />
+              <Route exact path="/flights" component={FlightSearch} />
               {(this.state.artist || this.state.latLng) &&
                 <Redirect to="/events" />}
               <Switch>
