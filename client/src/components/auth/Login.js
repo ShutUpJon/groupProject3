@@ -57,7 +57,7 @@ class Login extends Component {
 
     return (
       <Container className="login-page">
-        <div className="container" className="login">
+        <div className="container login">
           <div style={{ marginTop: "4rem" }} className="row">
             <div className="col s8 offset-s2">
               <Link to="/" className="btn-flat waves-effect">

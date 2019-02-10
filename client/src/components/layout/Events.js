@@ -5,6 +5,7 @@ import SelectedEvent from "./SelectedEvent";
 import Footer from './../Footer/Footer';
 import './events.css';
 import { withRouter } from 'react-router-dom';
+import Moment from "react-moment";
 
 class Events extends Component {
   state = {
@@ -13,6 +14,9 @@ class Events extends Component {
   }
 
   componentDidMount() {
+    if (!this.props.artist && !this.props.city) {
+      this.props.history.push(`/search`);
+    }
     let queryURL = "";
     if (this.props.artist && this.props.city) {
       queryURL = encodeURI(`https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=rQfy38E98IxqazSzP7PjGLbvIVDiHlUu&classificationName=Music&keyword=${this.props.artist}&latlong=${this.props.city}`);
@@ -61,7 +65,7 @@ class Events extends Component {
                         <li key={event.id}>
                         <Row>
                         <Col lg={10} md={10} sm={10}>
-                          {event.dates.start.localDate} - {event.name} - {event._embedded.venues[0].name} - {event._embedded.venues[0].city.name}, {event._embedded.venues[0].state.name}
+                          <Moment format="MMM D, YYYY">{event.dates.start.localDate}</Moment> - {event.name} - {event._embedded.venues[0].name} - {event._embedded.venues[0].city.name}, {event._embedded.venues[0].state.name}
                           </Col>
                           <Col lg={2} md={2} sm={2}>
                           <button onClick={this.handleClick} id={index} className="btn btn-outline-dark">Select Event</button>
