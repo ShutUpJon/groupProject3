@@ -1,9 +1,9 @@
 ul.concert-events-container {
-     max-width: 70%;
-     text-align: left;
-     margin: 0 auto;
+  max-width: 70%;
+  text-align: left;
+  margin: 0 auto;
 }
 p.hotel-name {
-     display: inline-block;
-     width: 70%;
+  display: inline-block;
+  width: 70%;
 }
