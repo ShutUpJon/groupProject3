@@ -66,7 +66,7 @@ class Login extends Component {
             </Link>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                 <h4>
-                  <b>Login</b> below
+                  <b>Login Below</b> 
               </h4>
                 <p className="grey-text text-darken-1">
                   Don't have an account? <Link to="/register">Register</Link>
@@ -116,7 +116,7 @@ class Login extends Component {
                       marginTop: "1rem"
                     }}
                     type="submit"
-                    className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                    className="btn btn-outline-dark"
                   >
                     Login
                 </button>
