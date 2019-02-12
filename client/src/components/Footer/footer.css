@@ -1,11 +1,11 @@
 .container-fluid.no-padding {
-     padding: 0;
- }
+    padding: 0;
+}
 .social {
      background-color: black;
      color: white;
      text-transform: uppercase;
-     padding: 2rem;
+     padding: 2rem 0;
      border-radius: 0;
 }
 .social h3 { 
