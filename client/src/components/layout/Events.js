@@ -35,7 +35,7 @@ class Events extends Component {
 
   handleClick = (event) => {
     event.preventDefault();
-    this.setState({ selectedEvent: this.state.events[event.target.id]})
+    this.setState({ selectedEvent: this.state.events[event.target.id] })
   }
 
   handleBack = (event) => {
@@ -59,21 +59,21 @@ class Events extends Component {
             </Fragment>
           ) : (
               <Fragment>
-                    <h1>{`${this.props.artist}`}</h1>
-                    <ul >
-                      {this.state.events.map((event, index) =>
-                        <li key={event.id}>
-                        <Row>
-                        <Col lg={10} md={10} sm={10}>
+                <h1>{`${this.props.artist}`}</h1>
+                <ul >
+                  {this.state.events.map((event, index) =>
+                    <li key={event.id}>
+                      <Row>
+                        <Col lg={9} md={7} sm={12} xs={12}>
                           <Moment format="MMM D, YYYY">{event.dates.start.localDate}</Moment> - {event.name} - {event._embedded.venues[0].name} - {event._embedded.venues[0].city.name}, {event._embedded.venues[0].state.name}
-                          </Col>
-                          <Col lg={2} md={2} sm={2}>
+                        </Col>
+                        <Col lg={3} md={5} sm={12} xs={12}>
                           <button onClick={this.handleClick} id={index} className="btn btn-outline-dark">Select Event</button>
-                          </Col>
-                          </Row>
-                        </li>
-                      )}
-                    </ul>
+                        </Col>
+                      </Row>
+                    </li>
+                  )}
+                </ul>
               </Fragment>
             )}
         </div>

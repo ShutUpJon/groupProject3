@@ -39,7 +39,7 @@ class Hotels extends Component {
                       {this.state.selectedHotel.formatted_address}
                     </p>
                     <p>
-                      Rating: {this.state.selectedHotel.rating}  
+                      Rating: {this.state.selectedHotel.rating}   
                     </p>
                     <p>
                       <a href={this.state.selectedHotel.website} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-dark">Book This Hotel</button></a> 
