@@ -67,7 +67,7 @@ class Register extends Component {
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                 <h4>
                   <b>Register Below</b>
-              </h4>
+                </h4>
                 <p className="grey-text text-darken-1">
                   Already have an account? <Link to="/login">Log in</Link>
                 </p>
