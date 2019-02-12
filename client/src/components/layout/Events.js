@@ -14,16 +14,16 @@ class Events extends Component {
   }
 
   componentDidMount() {
-    if (!this.props.artist && !this.props.city) {
+    if (!this.props.artist && !this.props.latLng) {
       this.props.history.push(`/search`);
     }
     let queryURL = "";
-    if (this.props.artist && this.props.city) {
-      queryURL = encodeURI(`https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=rQfy38E98IxqazSzP7PjGLbvIVDiHlUu&classificationName=Music&keyword=${this.props.artist}&latlong=${this.props.city}`);
+    if (this.props.artist && this.props.latLng) {
+      queryURL = encodeURI(`https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=rQfy38E98IxqazSzP7PjGLbvIVDiHlUu&classificationName=Music&keyword=${this.props.artist}&latlong=${this.props.latLng}`);
     } else if (this.props.artist) {
       queryURL = encodeURI(`https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=rQfy38E98IxqazSzP7PjGLbvIVDiHlUu&classificationName=Music&keyword=${this.props.artist}`);
-    } else if (this.props.city) {
-      queryURL = encodeURI(`https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=rQfy38E98IxqazSzP7PjGLbvIVDiHlUu&classificationName=Music&latlong=${this.props.city}`);
+    } else if (this.props.latLng) {
+      queryURL = encodeURI(`https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=rQfy38E98IxqazSzP7PjGLbvIVDiHlUu&classificationName=Music&latlong=${this.props.latLng}`);
     }
     axios.get(queryURL)
       .then(res => {
@@ -59,15 +59,30 @@ class Events extends Component {
             </Fragment>
           ) : (
               <Fragment>
-                    <h1>{`${this.props.artist}`}</h1>
+                    <h1>{this.props.artist && this.props.city ? (
+                      <Fragment>
+                        {`${this.props.artist} CONCERTS NEAR ${this.props.city}`}
+                      </Fragment>
+                    ) : this.props.artist ? (
+                      <Fragment>
+                        {`${this.props.artist} CONCERTS`}
+                      </Fragment>
+                    ) : this.props.city ? (
+                      <Fragment>
+                        {`CONCERTS NEAR ${this.props.city}`}
+                      </Fragment>
+                    ) :
+                      ("")
+                    }
+                    </h1>
                     <ul >
                       {this.state.events.map((event, index) =>
                         <li key={event.id}>
                         <Row>
-                        <Col lg={10} md={10} sm={10}>
+                        <Col lg={9} md={9} sm={9}>
                           <Moment format="MMM D, YYYY">{event.dates.start.localDate}</Moment> - {event.name} - {event._embedded.venues[0].name} - {event._embedded.venues[0].city.name}, {event._embedded.venues[0].state.name}
                           </Col>
-                          <Col lg={2} md={2} sm={2}>
+                          <Col lg={3} md={3} sm={3}>
                           <button onClick={this.handleClick} id={index} className="btn btn-outline-dark">Select Event</button>
                           </Col>
                           </Row>
