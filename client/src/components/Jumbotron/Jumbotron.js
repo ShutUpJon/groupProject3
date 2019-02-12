@@ -8,7 +8,7 @@ class CustomJumbotron extends Component {
                <Jumbotron fluid className="jumbo1">
                     <Container>
                          <h1>Destination. Music.</h1>
-                         <h3>Finding Concert Tickets, Flights, Hotels has never been easier.</h3>
+                         <h3>Finding Concert Tickets, Flights, & Hotels has never been easier.</h3>
                          <h3>With Roadie we take the guesswork out of destination concerts.</h3>
                     </Container>
                </Jumbotron>
