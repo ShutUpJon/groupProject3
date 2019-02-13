@@ -128,7 +128,6 @@ class Login extends Component {
         <br />
         <br />
         <br />
-        <Footer />
       </Container>
     );
   }

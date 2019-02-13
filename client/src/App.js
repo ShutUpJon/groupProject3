@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
@@ -18,6 +18,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 import Search from './components/layout/Search';
 import "./App.css";
 import FlightSearch from './components/layout/FlightSearch';
+import Footer from './components/Footer/Footer';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -60,6 +61,7 @@ class App extends Component {
 
   render() {
     return (
+      <Fragment>
       <Provider store={store}>
         <Router>
           <div className="App">
@@ -77,9 +79,11 @@ class App extends Component {
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
               </Switch>
             </Container>
+            <Footer />
           </div>
         </Router>
       </Provider>
+      </Fragment>
     );
   }
 }

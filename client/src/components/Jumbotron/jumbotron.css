@@ -1,10 +1,11 @@
-.jumbo1 {
+.jumbotron-fluid.jumbo1 {
      text-align: center;
      color: white;
      background: rgb(0,0,0);
      background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(133,133,133,1) 50%, rgba(255,255,255,1) 100%);
      text-shadow: .1rem .1rem .8rem black;
      padding-top: 1.5rem;
+     padding: 2rem;
 }
 
 h1 {
