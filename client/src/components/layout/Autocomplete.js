@@ -23,12 +23,10 @@ class LocationSearchInput extends Component {
       .then(results => getLatLng(results[0]))
       .then(latLngRes => {
         this.setState({ latLng: latLngRes })
-        this.props.latLong(this.state.latLng)
+        this.props.latLong(this.state.latLng, address)
       })
       .catch(error => console.error('Error', error));
-    this.setState({
-      address: address
-    });
+    this.setState({ address: address });
   };
 
   handleCloseClick = () => {

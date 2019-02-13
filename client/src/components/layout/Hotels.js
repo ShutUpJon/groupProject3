@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Container } from 'react-bootstrap';
 import axios from "axios";
+import Footer from './../Footer/Footer';
 import './hotels.css';
 
 class Hotels extends Component {
@@ -24,37 +25,39 @@ class Hotels extends Component {
   render() {
 
     return (
-      <Container>
-        <div>
-          <h1>Hotels</h1>
-          <ul className="concert-events-container">
-            {this.props.hotels.map((hotel, index) =>
-              <li key={index} data-key={hotel.id}>
-                <p className="hotel-name">
-                  {hotel.name}
-                </p>
-                {this.state.selectedHotel.id === hotel.id ? (
-                  <Fragment>
-                    <p>
-                      {this.state.selectedHotel.formatted_address}
-                    </p>
-                    <p>
-                      Rating: {this.state.selectedHotel.rating}  
-                    </p>
-                    <p>
-                      <a href={this.state.selectedHotel.website} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-dark">Book This Hotel</button></a> 
-                    </p>                
-                  </Fragment>
-                ) : (
+      <Fragment>
+        <Container>
+          <div>
+            <h1>Hotels</h1>
+            <ul className="concert-events-container">
+              {this.props.hotels.map((hotel, index) =>
+                <li key={index} data-key={hotel.id}>
+                  <p className="hotel-name">
+                    {hotel.name}
+                  </p>
+                  {this.state.selectedHotel.id === hotel.id ? (
                     <Fragment>
-                      <button onClick={this.handleClick} id={index} className="btn btn-outline-dark">Get More Info</button>
+                      <p>
+                        {this.state.selectedHotel.formatted_address}
+                      </p>
+                      <p>
+                        Rating: {this.state.selectedHotel.rating}
+                      </p>
+                      <p>
+                        <a href={this.state.selectedHotel.website} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-dark">Book This Hotel</button></a>
+                      </p>
                     </Fragment>
-                  )}
-              </li>
-            )}
-          </ul>
-        </div>
-      </Container>
+                  ) : (
+                      <Fragment>
+                        <button onClick={this.handleClick} id={index} className="btn btn-outline-dark">Get More Info</button>
+                      </Fragment>
+                    )}
+                </li>
+              )}
+            </ul>
+          </div>
+        </Container>
+      </Fragment>
     );
   }
 };

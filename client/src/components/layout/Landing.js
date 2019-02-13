@@ -6,18 +6,18 @@ import CustomImage from './../Image/Image';
 import About from './../About/About';
 import Footer from './../Footer/Footer';
 
+
 class Landing extends Component {
   render() {
     return (
       <div>
         <CustomCarousel />
-        <br />
         <CustomJumbotron />
+        <br />
         <CustomCard />
         <br />
         <CustomImage />
         <About />
-        <br />
         <Footer />
       </div>
     );

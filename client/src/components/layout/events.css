@@ -12,3 +12,6 @@ h1 {
 ul {
      list-style-type: none;
 }
+.container-fluid.no-padding {
+     padding: 0;
+}

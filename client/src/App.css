@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
-
 body {
-     overflow-x: hidden;
-     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 .container-fluid.no-padding {
     padding: 0;
 }
-
 .offset:before {
      height: 3.9rem;
      margin-top: -3.8rem;
@@ -19,41 +17,43 @@ body {
     .social a {
         font-size: 2.5em;
         padding: 1.2rem;
+        max-width: 100%;
    }
 
 }
 
 @media (max-width: 768px) {
 
-     .carousel-caption {
+    .carousel-caption {
          top: 10%;
-     }
-     .carousel-caption h1 {
+    }
+    .carousel-caption h1 {
          font-size: 350%;
-     }
-     .carousel-caption h3 {
+    }
+    .carousel-caption h3 {
          font-size: 140%;
          font-weight: 400;
          padding-bottom: .2rem;
-     }
-     .social a {
+    }
+    .social a {
           font-size: 2.5em;
           padding: 1.2rem;
-     }
-
-     .about {
+          max-width: 100%;
+    }
+    .about {
           padding-top: 1rem;
-     }
+    }
 
 }
 
 @media (max-width: 576px) {
 
-     .about {
+    .about {
           padding-top: 0;
-     }
-     .social a {
-        font-size: 2em;
+    }
+    .social a {
+        font-size: 2rem;
         padding: 1rem;
-   }
+        max-width: 100%;
+    }
 }

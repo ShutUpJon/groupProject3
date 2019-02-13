@@ -18,6 +18,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 import Search from './components/layout/Search';
 import "./App.css";
 import FlightSearch from './components/layout/FlightSearch';
+import Footer from './components/Footer/Footer';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -45,6 +46,7 @@ class App extends Component {
     this.state = {
       artist: '',
       latLng: '',
+      city: ''
     };
   }
 
@@ -52,7 +54,8 @@ class App extends Component {
     console.log(searchParams);
     this.setState({
       artist: searchParams.artist,
-      latLng: searchParams.latLng
+      latLng: searchParams.latLng,
+      city: searchParams.city
     });
   }
 
@@ -67,7 +70,7 @@ class App extends Component {
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/search" render={() => <Search searchParams={(searchParams) => this.handleSearchParams(searchParams)} />} />
-              <Route exact path="/events" render={() => <Events city={this.state.latLng} artist={this.state.artist} />} />
+              <Route exact path="/events" render={() => <Events city={this.state.city} latLng={this.state.latLng} artist={this.state.artist} />} />
               <Route exact path="/flights" component={FlightSearch} />
               {(this.state.artist || this.state.latLng) &&
                 <Redirect to="/events" />}
