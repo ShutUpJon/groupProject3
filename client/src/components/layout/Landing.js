@@ -17,7 +17,6 @@ class Landing extends Component {
         <br />
         <CustomImage />
         <About />
-        <br />
       </div>
     );
   }

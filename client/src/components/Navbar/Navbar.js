@@ -20,7 +20,7 @@ class CustomNavbar extends Component {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" >
-                         <Container>
+                         <Container fluid>
                               <Nav className="justify-content-end" activeKey="/">
                                    <Nav.Item>
                                         <Nav.Link href="/">Home</Nav.Link>
