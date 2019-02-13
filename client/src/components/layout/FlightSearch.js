@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Footer from './../Footer/Footer';
 import { Container } from 'react-bootstrap';
 import './search.css';
 

@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 import { Container, Col, Row } from 'react-bootstrap';
 import axios from 'axios';
 import SelectedEvent from "./SelectedEvent";
-import Footer from './../Footer/Footer';
 import './events.css';
 import { withRouter } from 'react-router-dom';
 import Moment from "react-moment";

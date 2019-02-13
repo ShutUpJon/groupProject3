@@ -4,7 +4,7 @@ import CustomJumbotron from './../Jumbotron/Jumbotron';
 import CustomCard from './../Card/Card';
 import CustomImage from './../Image/Image';
 import About from './../About/About';
-import Footer from './../Footer/Footer';
+
 
 class Landing extends Component {
   render() {
