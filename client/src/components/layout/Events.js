@@ -5,6 +5,7 @@ import SelectedEvent from "./SelectedEvent";
 import './events.css';
 import { withRouter } from 'react-router-dom';
 import Moment from "react-moment";
+import Footer from './../Footer/Footer';
 
 class Events extends Component {
   state = {
@@ -48,50 +49,53 @@ class Events extends Component {
 
   render() {
     return (
-      <Container className="events-page">
-        <div>
-          {this.state.selectedEvent ? (
-            <Fragment>
-              <button onClick={this.handleBack} className="btn btn-outline-dark">Back to All Events</button>
-              <button onClick={this.handleGoToFlights} className="btn btn-outline-dark">Search For Flights</button>
-              <SelectedEvent selectedEvent={this.state.selectedEvent} />
-            </Fragment>
-          ) : (
+      <Fragment>
+        <Container className="events-page">
+          <div>
+            {this.state.selectedEvent ? (
               <Fragment>
-                <h1>{this.props.artist && this.props.city ? (
-                  <Fragment>
-                    {`${this.props.artist} CONCERTS NEAR ${this.props.city}`}
-                  </Fragment>
-                ) : this.props.artist ? (
-                  <Fragment>
-                    {`${this.props.artist} CONCERTS`}
-                  </Fragment>
-                ) : this.props.city ? (
-                  <Fragment>
-                    {`CONCERTS NEAR ${this.props.city}`}
-                  </Fragment>
-                ) :
-                  ("")
-                }
-                </h1>
-                <ul >
-                  {this.state.events.map((event, index) =>
-                    <li key={event.id}>
-                      <Row>
-                        <Col lg={9} md={7} sm={12} xs={12}>
-                          <Moment format="MMM D, YYYY">{event.dates.start.localDate}</Moment> - {event.name} - {event._embedded.venues[0].name} - {event._embedded.venues[0].city.name}, {event._embedded.venues[0].state.name}
-                        </Col>
-                        <Col lg={3} md={5} sm={12} xs={12}>
-                          <button onClick={this.handleClick} id={index} className="btn btn-outline-dark">Select Event</button>
-                        </Col>
-                      </Row>
-                    </li>
-                  )}
-                </ul>
+                <button onClick={this.handleBack} className="btn btn-outline-dark">Back to All Events</button>
+                <button onClick={this.handleGoToFlights} className="btn btn-outline-dark">Search For Flights</button>
+                <SelectedEvent selectedEvent={this.state.selectedEvent} />
               </Fragment>
-            )}
-        </div>
-      </Container>
+            ) : (
+                <Fragment>
+                  <h1>{this.props.artist && this.props.city ? (
+                    <Fragment>
+                      {`${this.props.artist} CONCERTS NEAR ${this.props.city}`}
+                    </Fragment>
+                  ) : this.props.artist ? (
+                    <Fragment>
+                      {`${this.props.artist} CONCERTS`}
+                    </Fragment>
+                  ) : this.props.city ? (
+                    <Fragment>
+                      {`CONCERTS NEAR ${this.props.city}`}
+                    </Fragment>
+                  ) :
+                        ("")
+                  }
+                  </h1>
+                  <ul >
+                    {this.state.events.map((event, index) =>
+                      <li key={event.id}>
+                        <Row>
+                          <Col lg={9} md={7} sm={12} xs={12}>
+                            <Moment format="MMM D, YYYY">{event.dates.start.localDate}</Moment> - {event.name} - {event._embedded.venues[0].name} - {event._embedded.venues[0].city.name}, {event._embedded.venues[0].state.name}
+                          </Col>
+                          <Col lg={3} md={5} sm={12} xs={12}>
+                            <button onClick={this.handleClick} id={index} className="btn btn-outline-dark">Select Event</button>
+                          </Col>
+                        </Row>
+                      </li>
+                    )}
+                  </ul>
+                </Fragment>
+              )}
+          </div>
+        </Container>
+        <Footer />
+      </Fragment>
     );
   }
 };

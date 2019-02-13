@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import LocationSearchInput from './Autocomplete';
 import { Container } from 'react-bootstrap';
+import Footer from './../Footer/Footer';
 import './search.css';
 
 class Search extends Component {
@@ -50,6 +51,7 @@ class Search extends Component {
           </div>
           <br />
         </Container>
+        <Footer />
       </Fragment>
     )
   }
