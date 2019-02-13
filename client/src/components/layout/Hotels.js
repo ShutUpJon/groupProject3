@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Container } from 'react-bootstrap';
 import axios from "axios";
-import Footer from './../Footer/Footer';
 import './hotels.css';
 
 class Hotels extends Component {
