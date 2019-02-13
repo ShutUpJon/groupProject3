@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
+const path = require("path");
 
 const users = require("./routes/api/users");
 
@@ -35,7 +36,16 @@ require("./config/passport")(passport);
 
 // Routes
 app.use("/api/users", users);
+// Serve up static assets (usually on heroku)
+if (true || process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
+// Send every request to the React app
+// Define any API routes before this runs
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`API server up and running on port ${port} !`));
