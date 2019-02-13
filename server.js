@@ -33,13 +33,12 @@ app.use(passport.initialize());
 
 // Passport config
 require("./config/passport")(passport);
-
-// Routes
-app.use("/api/users", users);
 // Serve up static assets (usually on heroku)
-if (true || process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+// Routes
+app.use("/api/users", users);
 
 // Send every request to the React app
 // Define any API routes before this runs
