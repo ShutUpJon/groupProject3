@@ -3,7 +3,8 @@
 .register-page {
      font-family: 'Roboto', sans-serif;
      text-transform: uppercase;
-     margin-top: 4rem;
+     padding-top: 4rem;
+     padding-bottom: 4rem;
 }
 .btn {
      text-transform: uppercase;

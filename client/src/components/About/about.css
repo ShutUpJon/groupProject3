@@ -4,7 +4,7 @@
      color: white;
      margin: 0;
      padding-top: 3rem;
-     padding-bottom: 2rem;
+     padding-bottom: 0;
      height: 370px;
      text-transform: uppercase;
      text-shadow: .1rem .1rem .8rem black;
@@ -12,5 +12,6 @@
 }
 .about h1{
      color: white;
+     padding-top: 2rem;
      padding-bottom: 2rem;
 }

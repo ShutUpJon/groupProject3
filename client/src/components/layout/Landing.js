@@ -11,14 +11,13 @@ class Landing extends Component {
     return (
       <div>
         <CustomCarousel />
-        <br />
         <CustomJumbotron />
+        <br />
         <CustomCard />
         <br />
         <CustomImage />
         <About />
         <br />
-        <Footer />
       </div>
     );
   }

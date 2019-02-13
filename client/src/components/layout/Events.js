@@ -92,7 +92,6 @@ class Events extends Component {
               </Fragment>
             )}
         </div>
-        <Footer />
       </Container>
     );
   }

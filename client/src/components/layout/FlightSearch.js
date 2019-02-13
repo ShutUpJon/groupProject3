@@ -51,7 +51,6 @@ class FlightSearch extends Component {
             </form>
           </div>
         </div>
-        <Footer />
       </Container>
     )
   }
