@@ -18,7 +18,6 @@ import Dashboard from "./components/dashboard/Dashboard";
 import Search from './components/layout/Search';
 import "./App.css";
 import FlightSearch from './components/layout/FlightSearch';
-import Footer from './components/Footer/Footer';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
