@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 body {
-     overflow-x: hidden;
-     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 .container-fluid.no-padding {
     padding: 0;

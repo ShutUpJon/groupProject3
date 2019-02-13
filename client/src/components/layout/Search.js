@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import LocationSearchInput from './Autocomplete';
-import Footer from './../Footer/Footer';
 import { Container } from 'react-bootstrap';
 import './search.css';
 

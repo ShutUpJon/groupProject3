@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
-import Footer from './../Footer/Footer';
 import './login.css';
 
 class Login extends Component {
