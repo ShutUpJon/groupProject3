@@ -16,8 +16,7 @@ class CustomCard extends Component {
                                    <Card.Body>
                                         <Card.Title>Search Artists</Card.Title>
                                         <Card.Text>
-                                             Some quick example text to build on the card title and make up the bulk of
-                                             the card's content.
+                                             Enter your favorite Band/Artist here for a list of upcoming events
                                         </Card.Text>
                                         <Button variant="outline-dark" target="_blank" href="/search">Search Artists</Button>
                                    </Card.Body>
@@ -29,8 +28,7 @@ class CustomCard extends Component {
                                    <Card.Body>
                                         <Card.Title>Search Location</Card.Title>
                                         <Card.Text>
-                                             Some quick example text to build on the card title and make up the bulk of
-                                             the card's content.
+                                             Enter your desired location/destination here for a list of upcoming events
                                         </Card.Text>
                                         <Button variant="outline-dark" target="_blank" href="/search">Search Location</Button>
                                    </Card.Body>
