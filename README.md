@@ -1,5 +1,12 @@
 # Welcome to the Roadie App
 ## Find Conert Tickets, Hotels, and Flight all in one convinient location
+The idea with this app is to allow you to find Concert Tickets, Hotels, and Flights all in one location for 'Destination Concerts.'
+
+- Want to go see Metallica in New York, but you live in California? No problem.
+- Want to see what upcoming events are happening in Denver, CO but you live in Galvestion, TX? No problem.
+
+Roadie allows you to search for upcoming events in your hometown, or your home away from home. 
+Raodie will also help you trackwhere your favorite bands are touring all across the USA and you can pack up and follow them around like they're the Grateful Dead.
 
 # How it Works:
 - Roadie allows you to Search upcoming events via searching for Artits/Bands or Locations.
