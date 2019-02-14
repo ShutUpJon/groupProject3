@@ -10,7 +10,7 @@ class Hotels extends Component {
 
   handleClick = (event) => {
     event.preventDefault();
-    let queryURL = encodeURI(`https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyDPmxGsaHT-silFQUJO898ABopWlQswjB8&placeid=${this.props.hotels[event.target.id].place_id}`);
+    let queryURL = encodeURI(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyDPmxGsaHT-silFQUJO898ABopWlQswjB8&placeid=${this.props.hotels[event.target.id].place_id}`);
     console.log(queryURL);
 
     axios.get(queryURL)
@@ -31,23 +31,26 @@ class Hotels extends Component {
             <ul className="concert-events-container">
               {this.props.hotels.map((hotel, index) =>
                 <li key={index} data-key={hotel.id}>
-                  <p className="hotel-name">
-                    {hotel.name}
-                  </p>
                   {this.state.selectedHotel.id === hotel.id ? (
                     <Fragment>
+                      <strong><p className="hotel-name">
+                        {hotel.name}
+                      </p>
                       <p>
                         {this.state.selectedHotel.formatted_address}
                       </p>
                       <p>
                         Rating: {this.state.selectedHotel.rating}
-                      </p>
+                      </p></strong>
                       <p>
                         <a href={this.state.selectedHotel.website} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-dark">Book This Hotel</button></a>
                       </p>
                     </Fragment>
                   ) : (
                       <Fragment>
+                        <p className="hotel-name">
+                          {hotel.name}
+                        </p>
                         <button onClick={this.handleClick} id={index} className="btn btn-outline-dark">Get More Info</button>
                       </Fragment>
                     )}
