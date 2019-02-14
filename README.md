@@ -19,13 +19,10 @@ MongoDB | Express | React.js | Node.js | Passport.js | React-Bootstrap | Moment.
 
 
 # Improvements / What's Next?
-
-- Would like to be able to be able to render API Components directly in app.
-- Would like to be able to sort by the Event + Location Search by upcoming dates.
-
-- Would like to be able to save 'Favorites' either Location or Artist/Band for future reference with alerts to let you know when the Band/Artist of choice is back on tour, or in town/nearby. Also, allow alerts for upcoming events based on your saved location choices
+- Render API Components directly in app, so no need to visit external sites.
+- Sort by the Event + Location Search by upcoming dates. Due to limitations, only Artist/Band Search is ordered by date.
+- A ' Save Favorites' Feature. Save by either Location or Artist/Band for future reference with alerts to let you know when the Band/Artist of choice is back on tour, or in town/nearby. Allow alerts for upcoming events based on your saved location choices.
 
 # Contributors
-
 - Jon Lawrence @ ShutUpJon
 - Niko Hofmann @ nikohofmann
