@@ -3,7 +3,9 @@
 
 # How it Works
 
-# Technologies Used
+# Technologies Used:
+MongoDB | Express | React.js | Node.js | Passport.js | React-Bootstrap | Moment.js
+
 
 # Improvements / What's Next?
 
