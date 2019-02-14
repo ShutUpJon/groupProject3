@@ -1,4 +1,4 @@
-# Welcome to the Roadie App ## Find Conert Tickets, Hotels, and Flight all in one convinient location
+# Welcome to the Roadie App - Find Conert Tickets, Hotels, and Flight in one location!
 The idea with this app is to allow you to find Concert Tickets, Hotels, and Flights all in one location for 'Destination Concerts.'
 
 - Want to go see Metallica in New York, but you live in California? No problem.
