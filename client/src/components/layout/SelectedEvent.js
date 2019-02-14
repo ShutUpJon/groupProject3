@@ -10,7 +10,7 @@ class SelectedEvent extends Component {
   }
 
   componentDidMount() {
-    let queryURL = encodeURI(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyDPmxGsaHT-silFQUJO898ABopWlQswjB8&location=${this.props.selectedEvent._embedded.venues[0].location.latitude},${this.props.selectedEvent._embedded.venues[0].location.longitude}&rankby=distance&type=lodging`)
+    let queryURL = encodeURI(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyDPmxGsaHT-silFQUJO898ABopWlQswjB8&location=${this.props.selectedEvent._embedded.venues[0].location.latitude},${this.props.selectedEvent._embedded.venues[0].location.longitude}&radius=3500&type=lodging`)
 
     axios.get(queryURL)
       .then(res => {
