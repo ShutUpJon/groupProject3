@@ -7,7 +7,7 @@ The idea with this app is to allow you to find Concert Tickets, Hotels, and Flig
 Roadie allows you to search for upcoming events in your hometown, or your home away from home. 
 Raodie will also help you trackwhere your favorite bands are touring all across the USA and you can pack up and follow them around like they're the Grateful Dead.
 
- - View the app [here](https://www.google.com) - *Please note that this is deployed using the free heroku servers, and it can take a moment for them to wake up.*
+ - View the app [here](https://roadie-app.herokuapp.com/) - *Please note that this is deployed using the free heroku servers, and it can take a moment for them to wake up.*
 
 # How it Works:
 - Roadie allows you to Search upcoming events via searching for Artits/Bands or Locations.
