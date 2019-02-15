@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
-import './card.css';
+import './Card.css';
 
 var card1 = require('./card1.jpeg');
 var card2 = require('./card2.jpeg');
