@@ -42,6 +42,10 @@ body {
     }
     .about {
           padding-top: 1rem;
+          padding-bottom: 2rem;
+    }
+    .about h1 {
+        padding-top: .5rem
     }
 
 }
@@ -49,11 +53,12 @@ body {
 @media (max-width: 576px) {
 
     .about {
-          padding-top: 0;
+        padding-top: 0;
+        padding-bottom: 2rem;
     }
     .social a {
         font-size: 2rem;
-        padding: 1rem;
+        padding-top: 1rem;
         max-width: 100%;
     }
 }
