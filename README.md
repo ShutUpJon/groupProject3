@@ -19,7 +19,7 @@ Roadie will also help you trackwhere your favorite bands are touring all across 
 # Technologies Used:
 MongoDB | Express | React.js | Node.js | Passport.js | React-Bootstrap | Moment.js
 
-API's:
+# API's Used:
 
 Ticketmaster | Google Places | Skyscanner
 
