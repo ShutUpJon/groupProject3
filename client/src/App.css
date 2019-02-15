@@ -47,18 +47,26 @@ body {
     .about h1 {
         padding-top: .5rem
     }
+    .about h3 {
+        padding-bottom: .5rem;
+    }
 
 }
 
 @media (max-width: 576px) {
 
-    .about {
-        padding-top: 0;
-        padding-bottom: 2rem;
+    .about h1{
+        padding-top: .5rem;
+        padding-bottom: .5rem;
     }
+    .about h3 {
+        padding-bottom: 0rem;
+    }
+
     .social a {
         font-size: 2rem;
         padding-top: 1rem;
         max-width: 100%;
     }
+
 }
